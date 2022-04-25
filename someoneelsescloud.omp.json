@@ -1,0 +1,78 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+      {
+        "alignment": "left",
+        "segments": [
+          {
+            "background": "#e6ab5b",
+            "foreground": "#100e23",
+            "leading_diamond": "\ue0b6",
+            "properties": {
+              "time_format": "15:04:05"
+            },
+            "style": "diamond",
+            "template": "\uf64f {{ .CurrentDate | date .Format }} ",
+            "trailing_diamond": "\ue0b0",
+            "type": "time"
+          },
+          {
+            "background": "#99bec6",
+            "foreground": "#100e23",
+            "powerline_symbol": "\ue0b0",
+            "properties": {
+              "style": "folder"
+            },
+            "style": "powerline",
+            "template": " \ue5ff {{ .Path }} ",
+            "type": "path"
+          },
+          {
+            "background_templates": [
+                "{{ if or (.Working.Changed) (.Staging.Changed) }}#cd9298{{ end }}",
+                "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#fa3c4f{{ end }}",
+                "{{ if gt .Ahead 0 }}#88d9ff{{ end }}",
+                "{{ if gt .Behind 0 }}#88d9ff{{ end }}"
+              ],
+              "background": "#cd9298",
+              "foreground": "#193549",
+              "leading_diamond": "<transparent,#cd9298>\ue0b0</>",  
+              "properties": {
+                "branch_max_length": 25,
+                "fetch_stash_count": true,
+                "fetch_status": true,
+                "fetch_upstream_icon": true
+              },
+              "style": "diamond",
+              "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+              "trailing_diamond": "\ue0b0",
+              "type": "git"
+          },
+          {
+            "background": "#fbefe1",
+            "foreground": "#111111",
+            "powerline_symbol": "\ue0b0",
+            "leading_diamond": "<transparent,#fbefe1>\ue0b0</>",  
+            "style": "diamond",
+            "template": " \ufd03 {{ .Name }} ",
+            "trailing_diamond": "\ue0b0",
+            "type": "az"
+          },
+          {
+            "background": "#ffffff",
+            "foreground": "#000000",
+            "leading_diamond": "<transparent,#ffffff>\ue0b0</>",  
+            "style": "diamond",
+            "template": "\uf489 {{ .Origin }}",
+            "trailing_diamond": "\ue0b0",
+            "type": "az"
+          }
+        ],
+        "type": "prompt"
+      }
+    ],
+    "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+    "final_space": true,
+    "version": 2
+  }
+  
