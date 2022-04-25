@@ -8,10 +8,8 @@
 - Caskaydia Cove Nerd Font Complete Mono
 - Caskaydia Cove Nerd Font Complete Regular
 
-
-**Note:** It is recommeneded to store your themes in a seperate folder from the install folder (i.e C:\Workspace\Theme) to avoid being removed when updating the module.
-
 ## Command in PowerShell
+**Note:** It is recommeneded to store your themes in a seperate folder from the install folder (i.e C:\Workspace\Theme) to avoid being removed when updating the module.
 ```
 Set-PoshPrompt -Theme "<location>\someoneelsescloud.omp.json"
 ```
