@@ -1,4 +1,4 @@
-# Someone Elses Cloud theme for Oh My Posh: [someoneelsescloud.omp.json]
+# Someone Elses Cloud theme for Oh My Posh:
 - Time
 - Working Folder
 - Github Status
