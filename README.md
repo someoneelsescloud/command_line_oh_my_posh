@@ -4,7 +4,7 @@
 - Github Status
 - Azure CLI and Az PowerShell
 
-### See full installation instructions: https://www.someoneelsescloud.com/episodes/level-up-your-command-line-with-oh-my-posh
+**See full installation instructions:** https://www.someoneelsescloud.com/episodes/level-up-your-command-line-with-oh-my-posh
 
 ## Fonts included for Glyphs:
 - Caskaydia Cove Nerd Font Complete Mono
